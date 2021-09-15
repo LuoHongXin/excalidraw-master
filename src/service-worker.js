@@ -17,7 +17,7 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("/workbox/workbox-sw.js");
+importScripts("./workbox/workbox-sw.js");
 
 workbox.setConfig({
   modulePathPrefix: "/workbox/",
@@ -33,8 +33,7 @@ workbox.core.clientsClaim();
 workbox.precaching.precacheAndRoute(self.__WB_MANIFEST);
 
 workbox.routing.registerNavigationRoute(
-  workbox.precaching.getCacheKeyForURL("./index.html"),
-  {
+  workbox.precaching.getCacheKeyForURL("./index.html"), {
     blacklist: [/^\/_/, /\/[^/?]+\.[^/]+$/],
   },
 );
@@ -44,7 +43,9 @@ workbox.routing.registerRoute(
   new RegExp("/(fonts.css|.+.(ttf|woff2|otf))"),
   new workbox.strategies.StaleWhileRevalidate({
     cacheName: "fonts",
-    plugins: [new workbox.expiration.Plugin({ maxEntries: 10 })],
+    plugins: [new workbox.expiration.Plugin({
+      maxEntries: 10
+    })],
   }),
 );
 
