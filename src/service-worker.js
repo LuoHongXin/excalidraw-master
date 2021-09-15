@@ -17,7 +17,7 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("./workbox/workbox-sw.js");
+importScripts("/excalidraw-master/build/workbox/workbox-sw.js");
 
 workbox.setConfig({
   modulePathPrefix: "/workbox/",

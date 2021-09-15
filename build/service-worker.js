@@ -377,7 +377,7 @@
     }
     c.done ? e(u) : Promise.resolve(u).then(n, o)
   }
-  importScripts("./workbox/workbox-sw.js"), workbox.setConfig({
+  importScripts("/excalidraw-master/build/workbox/workbox-sw.js"), workbox.setConfig({
     modulePathPrefix: "/workbox/"
   }), self.addEventListener("message", (function (t) {
     t.data && "SKIP_WAITING" === t.data.type && self.skipWaiting()
