@@ -563,7 +563,7 @@
     'url': './static/js/main.8062f074.chunk.js'
   }, {
     'revision': null,
-    'url': './excalidraw-master/static/js/pwacompat.36f3b5f9.chunk.js'
+    'url': './excalidraw-master/build/static/js/pwacompat.36f3b5f9.chunk.js'
   }, {
     'revision': null,
     'url': './static/js/runtime-main.528f2c38.js'
